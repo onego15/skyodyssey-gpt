@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-20T15:24:22.161Z",
+  "browser": "156.0.8078.4",
+  "errors": [],
+  "checks": [
+    "keyboard takeoff",
+    "keyboard climb/turn/descent",
+    "runway 1 and 2 approach/touchdown/stop",
+    "all mission triggers (fixture-assisted)",
+    "terrain collision",
+    "retry preserves progress",
+    "pause"
+  ],
+  "limitation": "Mission navigation between islands not flown end-to-end in automated test."
+}
