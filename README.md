@@ -8,6 +8,10 @@
 
 ## 遊ぶ
 
+**公開版：[AERIS — 風の記憶をプレイ](https://onego15.github.io/skyodyssey-gpt/)**
+
+`main`へのpushでGitHub Actionsがテスト・ビルドを実行し、GitHub Pagesへ自動公開します。
+
 Node.js 22.12以上を推奨。
 
 ```sh
@@ -15,7 +19,7 @@ npm ci
 npm run dev
 ```
 
-表示されるローカルURL（通常 http://localhost:5173 ）をPCのブラウザで開きます。タイトル画面の「旅をはじめる」で開始。WebGL対応ブラウザとキーボードが必要です。
+表示されるローカルURL（通常 http://localhost:5173/skyodyssey-gpt/ ）をPCのブラウザで開きます。タイトル画面の「旅をはじめる」で開始。WebGL対応ブラウザとキーボードが必要です。
 
 ```sh
 npm run build

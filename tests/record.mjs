@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:960,height:600},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.clock.install({time:new Date('2026-10-21T00:00:00Z')});await page.clock.pauseAt(new Date('2026-10-21T00:00:01Z'));await page.goto('http://localhost:5173/?test');await page.click('#start');
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:960,height:600},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.clock.install({time:new Date('2026-10-21T00:00:00Z')});await page.clock.pauseAt(new Date('2026-10-21T00:00:01Z'));await page.goto('http://localhost:5173/skyodyssey-gpt/?test');await page.click('#start');
 const tick=async(ms)=>{for(let t=0;t<ms;t+=100)await page.clock.fastForward(Math.min(100,ms-t));};const state=()=>page.evaluate(()=>window.__flight.state);const set=v=>page.evaluate(v=>window.__flight.setState(v),v);
 // Real renderer frames from deterministic live gameplay; cuts between seeded scenes, no fabricated frames.
 fs.mkdirSync('docs/frames',{recursive:true});await page.evaluate(()=>window.__flight.setMission(0));let n=0;
